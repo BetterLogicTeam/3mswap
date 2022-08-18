@@ -1,0 +1,17 @@
+.brand img{
+    width: 150px;
+}
+
+.gift{
+    color: rgb(233, 44, 44) !important;
+    border: 1.5px solid rgb(233, 44, 44) ;
+    border-radius: 20px;
+}
+
+.gift2{
+    color: rgb(233, 44, 44) ;
+}
+
+.gift3{
+    margin-right: 1rem;
+}
