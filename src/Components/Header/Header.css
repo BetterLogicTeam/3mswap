@@ -33,3 +33,44 @@ a:hover{
 .dropdown-menu {
     background-color: #332737 ;
 }
+
+.menu{
+    font-size: 50px;
+    color: white !important;
+}
+
+.canvas{
+    background-color: #231F26;
+}
+
+.canvas_body{
+    text-align: center !important;
+}
+
+.hme{
+    font-size: 25px;
+    margin-right: 8px;
+}
+
+.brand2{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.brand2 img{
+    width: 220px;
+}
+
+
+@media (min-width:801px) and (max-width:6000px) {
+    .nev2{
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .nev{
+        display: none;
+    }
+}

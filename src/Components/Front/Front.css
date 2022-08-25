@@ -18,5 +18,28 @@
     position: absolute;
     background: transparent;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
+}
+
+@media screen and (max-width:800px) {
+    .display-3{
+        font-size: 36px;
+    }
+
+    .more{
+        font-size: 20px;
+    }
+
+    .eth {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fs-5 {
+        font-size: 15px!important;
+    }
+
+    /* .btcpanel{
+        width: 100% !important;
+    } */
 }
