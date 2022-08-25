@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './Faq_main.css'
 
 function Faq_main() {
   return (
@@ -201,7 +202,7 @@ function Faq_main() {
 					      </div>
 					      </div>
 			          </div>
-			        	<div class="col-md-4">
+			        	{/* <div class="col-md-4">
 			        		<button class="accordion">About SwapSpace</button>
 								<div class="panel">
 								  <p>What is SwapSpace?</p>
@@ -242,7 +243,106 @@ function Faq_main() {
 								<p><i>If you can't find the answer to your question, drop an email to support@swapspace.co. SwapSpace support team is always happy to help you.</i></p>
 
 								
-			        	</div>
+			        	</div> */}
+
+						<div className="col-md-4">
+							<div className="accordion" id="accordionPanelsStayOpenExample">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="panelsStayOpen-headingOne">
+                <button
+                  className="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  About SwapSpace
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseOne"
+                className="accordion-collapse collapse show"
+                // aria-labelledby="panelsStayOpen-headingOne"
+              >
+                <div className="accordion-body">
+				<div class="">
+								  <p>What is SwapSpace?</p>
+								  <p>How does SwapSpace work?</p>
+								  <p>Do I need to register to use SwapSpace?</p>
+								  <p>Why should I trust SwapSpace?</p>
+								  <p>What is SwapSpace’s fee?</p>
+								  <p>How can I make profit with SwapSpace?</p>
+								  <p>How can I buy cryptocurrency with a credit card on SwapSpace?</p>
+								</div>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="panelsStayOpen-headingTwo">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo"
+                >
+                  Exchange Process
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseTwo"
+                className="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingTwo"
+              >
+                <div className="accordion-body">
+				<div class="">
+								  <p>What is minimum amount?</p>
+								  <p>What is the maximum amount?</p>
+								  <p>How long does it take to exchange coins?</p>
+								  <p>My transaction takes too long. What should I do?</p>
+								  <p>Will I have to go through KYC?</p>
+								  <p>Why the amount I received is different from the initial amount?</p>
+								  <p>What is a floating rate exchange?</p>
+								  <p>What is a fixed rate exchange?</p>
+								  <p>What is the difference between fixed and floating exchange rates?</p>
+								  <p>How do I cancel my transaction?</p>
+								  <p>What is the transaction hash?</p>
+								  
+								</div>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="panelsStayOpen-headingThree">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree"
+                >
+                  Wallet
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseThree"
+                className="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingThree"
+              >
+                <div className="accordion-body">
+				<div class="">
+								  <p>What is a wallet address?</p>
+								  <p>How do I get a wallet address?</p>
+								  <p>What is the recipient’s address?</p>
+								</div>
+                </div>
+              </div>
+            </div>
+          </div>
+						</div>
 			        </div>
 
 			       

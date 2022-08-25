@@ -54,7 +54,7 @@ function Header() {
               <Nav.Link href="#deets" className="gift gift3 m-0">
                 <FaGift className="gift"></FaGift> How To Win $100+
               </Nav.Link>
-              <Nav.Link href="#deets" className="gift3">
+              <Nav.Link href="#deets" className="gift3 work">
                 <Link to="/Work_main">How It Work</Link>
               </Nav.Link>
               <Nav.Link href="#deets" className="gift3">
