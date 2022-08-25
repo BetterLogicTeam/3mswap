@@ -1,21 +1,98 @@
 import React from "react";
-import { AiFillStar } from "react-icons/ai";
-
+import { AiFillStar,AiOutlineClose } from "react-icons/ai";
+import {FaAngleDown} from 'react-icons/fa'
+import {BiDownArrowAlt} from 'react-icons/bi'
+import './Front.css'
 
 function Front() {
     
   return (
     <div>
+        <div className="pios d-none justify-content-center align-items-center">
+        <div className="viewoffers d-flex flex-column px-3 ">
+                                                    <div className=" w-100 d-flex flex-row justify-content-between align-items-center my-2">
+                                                            <p className=" m-0 p-0">Connect to Wallet : </p>
+                                                            <button className=" bg-transparent border-0 btn text-white w-auto" onClick={()=>{
+                                                                let ethpanel = document.querySelector('.pios');
+                                                                ethpanel.classList.remove('d-flex');
+                                                                    ethpanel.classList.add('d-none');
+                                                            }}><AiOutlineClose /></button>
+                                                        </div>
+                                            <div class="swapbg9">
+                                                <div class="connect_wallet d-flex align-items-center flex-column w-100">
+                                                    <button class="connect_metamast">
+                                                        <div class="wallet_name">
+                                                            <h3>Metamask</h3>
+                                                        </div>
+                                                        <div class="wallet_name">
+                                                            <img src="Assets/image/meta_mask.png" />
+                                                        </div>
+                                                    </button>
+                                                    <button class="connect_metamast">
+                                                        <div class="wallet_name">
+                                                            <h3>TrustWallet</h3>
+                                                        </div>
+                                                        <div class="wallet_name">
+                                                            <img src="Assets/image/trust_wallet.png" />
+                                                        </div>
+                                                    </button>
+                                                    <button class="connect_metamast">
+                                                        <div class="wallet_name">
+                                                            <h3>MathWallet</h3>
+                                                        </div>
+                                                        <div class="wallet_name">
+                                                            <img src="Assets/image/math_wallet.png" />
+                                                        </div>
+                                                    </button>
+                                                    <button class="connect_metamast">
+                                                        <div class="wallet_name">
+                                                            <h3>MathWallet</h3>
+                                                        </div>
+                                                        <div class="wallet_name">
+                                                            <img src="Assets/image/math_wallet.png" />
+                                                        </div>
+                                                    </button>
+                                                    <button class="connect_metamast">
+                                                        <div class="wallet_name">
+                                                            <h3>WalletConnect</h3>
+                                                        </div>
+                                                        <div class="wallet_name">
+                                                            <img src="Assets/image/connect_wallet.png" />
+                                                        </div>
+                                                    </button>
+                                                    <button class="connect_metamast">
+                                                        <div class="wallet_name">
+                                                            <h3>Binance Chain Wallet</h3>
+                                                        </div>
+                                                        <div class="wallet_name">
+                                                            <img src="Assets/image/binance_chain_wallet.png" />
+                                                        </div>
+                                                    </button>
+                                                    <button class="connect_metamast">
+                                                        <div class="wallet_name">
+                                                            <h3>SafePal Wallet</h3>
+                                                        </div>
+                                                        <div class="wallet_name">
+                                                            <img src="Assets/image/safepal_wallet.png" />
+                                                        </div>
+                                                    </button>
+                                                    <div class="connect_info">
+                                                        <a href="#"> ? Learn how to connect</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                </div>
+        </div>
       <section>
-			    <div class="container">
-			        <div class="row">
-			        	<div class="col-md-5 py_0 heading">
+			    <div class="container p-0">
+			        <div class="row m-0 p-0">
+			        	<div class="col-md-5 p-0 heading">
 			        		 <div class="pools">
 			                    {/* <!-- Nav pills --> */}
 			                    
 			                    {/* <!-- Tab panes --> */}
 			                    <div class="tab-content">
-			                        <div class="container py_0 tab-pane active">
+			                        <div class="container py_0 p-0 tab-pane active">
 			                            <div class="exchange_tab">
 			                                <div class="exchange_wrap1 pt_5">
 			                                    <div class="exchange_hd">
@@ -28,37 +105,476 @@ function Front() {
 								                    </ul>
 			                                    </div>
 			                                    <div class="exchange_tools">
-			                                    	<ul class="nav nav-pills pool_tab" role="tablist">
-								                        
-								                       
+			                                    	<ul class="nav nav-pills pool_tab" role="tablist">								                       
 								                        <li class="nav-item">
 								                            <a class="nav-link" href="liquidity.html">Buy Crypto</a>
 								                        </li>
 								                    </ul>
-			                                        
 			                                    </div>
 			                                </div>
 			                                <br />
 			                                <h6>You Send</h6>
 			                                <div class="exch_bg">
 
-			                                    <div class="exchange_wrap" style={{padding: "8px 0px 17px 1px"}}>
+			                                    <div class="exchange_wrap position-relative" style={{padding: "8px 0px 17px 1px"}}>
 			                                    	<div class="exchange_hd ex_font width_fluid">
 			                                            <input type="text" class="input_set" placeholder="0.0" />
 			                                        </div>
 			                                        <div class="exchange_tools">
-
 			                                            <div class="bnb_btn bnb_position">
-			                                            	 <span class="swap_from">Swap From</span> 
-			                                                <button onclick="openNav8()">
+			                                                <button onClick={()=>{
+                                                                let btcpanel = document.querySelector('.btcpanel');
+                                                                if(btcpanel.classList.contains('d-flex'))
+                                                                {
+                                                                    btcpanel.classList.remove('d-flex');
+                                                                    btcpanel.classList.add('d-none');
+                                                                }
+                                                                else{
+                                                                    btcpanel.classList.add('d-flex');
+                                                                    btcpanel.classList.remove('d-none');
+                                                                }
+                                                            }}>
 			                                                	<img src="bit.png"/>
-			                                                	<span><b>BTC</b></span>
-			                                                	<i class="fa fa-chevron-down"></i>
+			                                                	<span><b>BTC</b></span>                                                                                                                               
+                                                                <FaAngleDown />
 			                                                </button>
 			                                            </div>
 			                                        </div>
-			                                        
+			                                        <div className=" d-none flex-column justify-content-center align-items-center p-4 rounded-4 btcpanel position-absolute">
+                                                        <div className=" w-100 d-flex flex-row justify-content-between align-items-center my-2">
+                                                            <p className=" m-0 p-0">Select a token ? </p>
+                                                            <button className=" bg-transparent border-0 btn text-white" onClick={()=>{
+                                                                let btcpanel = document.querySelector('.btcpanel');
+                                                                btcpanel.classList.remove('d-flex');
+                                                                    btcpanel.classList.add('d-none');
+                                                            }}><AiOutlineClose /></button>
+                                                        </div>
+                                                        <input className=" w-100 rounded-3 bg-transparent border-light p-3 fs-5" placeholder="Search Name or Place Address" />
+                                                        <p className=" w-100 my-2">Common Bases </p>
+                                                        <div class="eth"> 
+                                                            <div class="eth_img d-flex justify-content-center align-items-center">
+                                                                <img src='Assets/image/eth1.jpg' className="  m-1"/>
+                                                                ETH
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/sushi.jpg"  className="  m-1" /> SUSHI
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/wbtr.jpg" className="  m-1" /> WBTR
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/mim.jpg" className="  m-1" />  MIM
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/spell.webp" className="  m-1" />  SPELL
+                                                            </div>
+                                                        </div>
+                                                        <div class="eth"> 
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/ice.webp" className="  m-1"  /> ICE
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/usdc.jpg" className="  m-1"  /> USDC
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/usdt.jpg" className="  m-1"  /> USDT
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/dai.png" className="  m-1"  />  DAI
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/frax.webp" className="  m-1"  />  FRAX
+                                                            </div>
+
+
+                                                        </div>
+                                                        <div className=" w-100 d-flex flex-row justify-content-between align-items-center my-2">
+                                                            <p className=" m-0 p-0">Token Name </p>
+                                                            <BiDownArrowAlt />
+                                                        </div>
+                                                        <div className=" w-100">
+                                                        <div class="all_token scroll_track">
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bnb.png" /> &nbsp;&nbsp;BNB</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ADA.png" /> &nbsp;&nbsp;ADA</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ALPHA.png" /> &nbsp;&nbsp;ALPHA</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ANKR.png" /> &nbsp;&nbsp;ANKR</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ATM.png" /> &nbsp;&nbsp;ATM</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ATOM.png" /> &nbsp;&nbsp;ATOM</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/BAKE.png" /> &nbsp;&nbsp;BAKE</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bLBT.png" /> &nbsp;&nbsp;bLBT</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/usdt.png" />&nbsp;&nbsp; USDT</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/wbnb.png" />&nbsp;&nbsp; WBNB</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/1inch.webp" /> &nbsp;&nbsp;1INCH</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/aave.jpg" /> &nbsp;&nbsp;AAVE</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/adx.webp" /> &nbsp;&nbsp;ADX</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/aer.webp" /> &nbsp;&nbsp;AERGO</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/aethc.webp" /> &nbsp;&nbsp;aETHc</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ageur.webp" /> &nbsp;&nbsp;agEUR</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/agld.webp" /> &nbsp;&nbsp;AGLD</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/akro.webp" /> &nbsp;&nbsp;AKRO</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/alcx.webp" /> &nbsp;&nbsp;ALCX</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/aleph.webp" /> &nbsp;&nbsp;ALEPH</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/alpa.webp" /> &nbsp;&nbsp;ALPA</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/alpaca.webp" /> &nbsp;&nbsp;ALPACA</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/alpha.webp" /> &nbsp;&nbsp;ALPHA</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/alusd.webp" /> &nbsp;&nbsp;alUSD</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/amp.jpg" /> &nbsp;&nbsp;AMP</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ampl.webp" /> &nbsp;&nbsp;AMPL</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/angle.webp" /> &nbsp;&nbsp;ANGLE</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ankr.webp" /> &nbsp;&nbsp;ANKR</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ant.jpg" /> &nbsp;&nbsp;ANT</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ant.jpg" /> &nbsp;&nbsp;ANT</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/apl3.webp" /> &nbsp;&nbsp;API3</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/apw.webp" /> &nbsp;&nbsp;APW</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/arch.webp" /> &nbsp;&nbsp;ARCH</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/arcx.webp" /> &nbsp;&nbsp;ARCX</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/armor.webp" /> &nbsp;&nbsp;ARMOR</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/arnxm.jpg" /> &nbsp;&nbsp;ARNXM</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/asg.webp" /> &nbsp;&nbsp;ASG</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/assy.webp" /> &nbsp;&nbsp;ASSY</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/attr.webp" /> &nbsp;&nbsp;ATTR</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/auction.webp" /> &nbsp;&nbsp;AUCTION</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/audio.webp" /> &nbsp;&nbsp;AUDIO</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/avastr.webp" /> &nbsp;&nbsp;AVASTR</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/axs.webp" /> &nbsp;&nbsp;AXS</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/axs.webp" /> &nbsp;&nbsp;AXS</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/bab.webp" /> &nbsp;&nbsp;BAB</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/bac.webp" /> &nbsp;&nbsp;BAC</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/badger.webp" /> &nbsp;&nbsp;BADGER</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bakc.webp" /> &nbsp;&nbsp;BAKC</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bal.webp" /> &nbsp;&nbsp;BAL</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bal.webp" /> &nbsp;&nbsp;BAL</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/banana.webp" /> &nbsp;&nbsp;BANANA</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/band.webp" /> &nbsp;&nbsp;BAND</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bank.webp" /> &nbsp;&nbsp;BANk</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/base.webp" /> &nbsp;&nbsp;BASE</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bask.webp" /> &nbsp;&nbsp;BASK</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bcp.webp" /> &nbsp;&nbsp;BCP</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bdi.webp" /> &nbsp;&nbsp;BDI</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bfc.webp" /> &nbsp;&nbsp;BFC</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    
+                    
+
+
+                </div>
+                                                        </div>
+                                                    </div>
 			                                    </div>
+
 			                                </div>
 			                                <div class="exchange_arrow">
 			                                    <h6>You Get</h6>
@@ -69,27 +585,473 @@ function Front() {
 			                                </div>
 			                                <div class="exch_bg mb-4">
 			                                    
-			                                    <div class="exchange_wrap" style={{padding: "8px 0px 17px 1px"}}>
+			                                    <div class="exchange_wrap position-relative" style={{padding: "8px 0px 17px 1px"}}>
 			                                    	 <div class="exchange_hd ex_font width_fluid ">
 			                                            <input type="number" class="input_set" placeholder="0.0" />
 			                                        </div>
 			                                    	 <div class="exchange_tools">
 
 			                                            <div class="bnb_btn bnb_position">
-			                                            	 <span class="swap_from">Swap From</span> 
-			                                                <button onclick="openNav8()">
+			                                                <button onClick={()=>{
+                                                                let btcpanel = document.querySelector('.ethpanel');
+                                                                if(btcpanel.classList.contains('d-flex'))
+                                                                {
+                                                                    btcpanel.classList.remove('d-flex');
+                                                                    btcpanel.classList.add('d-none');
+                                                                }
+                                                                else{
+                                                                    btcpanel.classList.add('d-flex');
+                                                                    btcpanel.classList.remove('d-none');
+                                                                }
+                                                            }}>
 			                                                	<img src="eth.png"/>
-			                                                	<span><b>ETH</b></span>
-			                                                	<i class="fa fa-chevron-down"></i>
+			                                                	<span><b>ETH</b></span>                                                                
+                                                                <FaAngleDown />
 			                                                </button>
 			                                            </div>
 			                                        </div>
-			                                       
+                                                    <div className=" d-none flex-column justify-content-center align-items-center p-4 rounded-4 ethpanel position-absolute">
+                                                        <div className=" w-100 d-flex flex-row justify-content-between align-items-center my-2">
+                                                            <p className=" m-0 p-0">Select a token ? </p>
+                                                            <button className=" bg-transparent border-0 btn text-white" onClick={()=>{
+                                                                let ethpanel = document.querySelector('.ethpanel');
+                                                                ethpanel.classList.remove('d-flex');
+                                                                    ethpanel.classList.add('d-none');
+                                                            }}><AiOutlineClose /></button>
+                                                        </div>
+                                                        <input className=" w-100 rounded-3 bg-transparent border-light p-3 fs-5" placeholder="Search Name or Place Address" />
+                                                        <p className=" w-100 my-2">Common Bases </p>
+                                                        <div class="eth"> 
+                                                            <div class="eth_img d-flex justify-content-center align-items-center">
+                                                                <img src='Assets/image/eth1.jpg' className="  m-1"/>
+                                                                ETH
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/sushi.jpg"  className="  m-1" /> SUSHI
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/wbtr.jpg" className="  m-1" /> WBTR
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/mim.jpg" className="  m-1" />  MIM
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/spell.webp" className="  m-1" />  SPELL
+                                                            </div>
+                                                        </div>
+                                                        <div class="eth"> 
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/ice.webp" className="  m-1"  /> ICE
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/usdc.jpg" className="  m-1"  /> USDC
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/usdt.jpg" className="  m-1"  /> USDT
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/dai.png" className="  m-1"  />  DAI
+                                                            </div>
+                                                            <div class="eth_img  d-flex justify-content-center align-items-center">
+                                                                <img src="Assets/image/frax.webp" className="  m-1"  />  FRAX
+                                                            </div>
+
+
+                                                        </div>
+                                                        <div className=" w-100 d-flex flex-row justify-content-between align-items-center my-2">
+                                                            <p className=" m-0 p-0">Token Name </p>
+                                                            <BiDownArrowAlt />
+                                                        </div>
+                                                        <div className=" w-100">
+                                                        <div class="all_token scroll_track">
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bnb.png" /> &nbsp;&nbsp;BNB</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ADA.png" /> &nbsp;&nbsp;ADA</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ALPHA.png" /> &nbsp;&nbsp;ALPHA</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ANKR.png" /> &nbsp;&nbsp;ANKR</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ATM.png" /> &nbsp;&nbsp;ATM</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ATOM.png" /> &nbsp;&nbsp;ATOM</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/BAKE.png" /> &nbsp;&nbsp;BAKE</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bLBT.png" /> &nbsp;&nbsp;bLBT</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/usdt.png" />&nbsp;&nbsp; USDT</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/wbnb.png" />&nbsp;&nbsp; WBNB</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/1inch.webp" /> &nbsp;&nbsp;1INCH</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/aave.jpg" /> &nbsp;&nbsp;AAVE</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/adx.webp" /> &nbsp;&nbsp;ADX</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/aer.webp" /> &nbsp;&nbsp;AERGO</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/aethc.webp" /> &nbsp;&nbsp;aETHc</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ageur.webp" /> &nbsp;&nbsp;agEUR</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/agld.webp" /> &nbsp;&nbsp;AGLD</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/akro.webp" /> &nbsp;&nbsp;AKRO</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/alcx.webp" /> &nbsp;&nbsp;ALCX</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/aleph.webp" /> &nbsp;&nbsp;ALEPH</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/alpa.webp" /> &nbsp;&nbsp;ALPA</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/alpaca.webp" /> &nbsp;&nbsp;ALPACA</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/alpha.webp" /> &nbsp;&nbsp;ALPHA</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/alusd.webp" /> &nbsp;&nbsp;alUSD</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/amp.jpg" /> &nbsp;&nbsp;AMP</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ampl.webp" /> &nbsp;&nbsp;AMPL</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/angle.webp" /> &nbsp;&nbsp;ANGLE</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ankr.webp" /> &nbsp;&nbsp;ANKR</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ant.jpg" /> &nbsp;&nbsp;ANT</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/ant.jpg" /> &nbsp;&nbsp;ANT</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/apl3.webp" /> &nbsp;&nbsp;API3</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/apw.webp" /> &nbsp;&nbsp;APW</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/arch.webp" /> &nbsp;&nbsp;ARCH</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/arcx.webp" /> &nbsp;&nbsp;ARCX</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/armor.webp" /> &nbsp;&nbsp;ARMOR</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/arnxm.jpg" /> &nbsp;&nbsp;ARNXM</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/asg.webp" /> &nbsp;&nbsp;ASG</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/assy.webp" /> &nbsp;&nbsp;ASSY</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/attr.webp" /> &nbsp;&nbsp;ATTR</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/auction.webp" /> &nbsp;&nbsp;AUCTION</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/audio.webp" /> &nbsp;&nbsp;AUDIO</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/avastr.webp" /> &nbsp;&nbsp;AVASTR</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/axs.webp" /> &nbsp;&nbsp;AXS</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/axs.webp" /> &nbsp;&nbsp;AXS</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/bab.webp" /> &nbsp;&nbsp;BAB</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/bac.webp" /> &nbsp;&nbsp;BAC</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="ssets/image/badger.webp" /> &nbsp;&nbsp;BADGER</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bakc.webp" /> &nbsp;&nbsp;BAKC</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bal.webp" /> &nbsp;&nbsp;BAL</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bal.webp" /> &nbsp;&nbsp;BAL</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/banana.webp" /> &nbsp;&nbsp;BANANA</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/band.webp" /> &nbsp;&nbsp;BAND</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bank.webp" /> &nbsp;&nbsp;BANk</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/base.webp" /> &nbsp;&nbsp;BASE</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bask.webp" /> &nbsp;&nbsp;BASK</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bcp.webp" /> &nbsp;&nbsp;BCP</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bdi.webp" /> &nbsp;&nbsp;BDI</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                     <div class="token_list">
+                        <div class="token_icon">
+                            <h2><img src="Assets/image/bfc.webp" /> &nbsp;&nbsp;BFC</h2>
+                        </div>
+                        <div class="token_list"></div>
+                    </div>
+                    
+                    
+
+
+                </div>
+                                                        </div>
+                                                    </div>
 			                                    </div>
 			                                </div>
 			                               
 			                                <div class="wallet_btn mr_set">
-			                                    <button class="btn button btn-success" onclick="openNav9()">VIEW OFFERS</button>
+			                                    <button class="btn button btn-success" onClick={()=>{
+                                                                let btcpanel = document.querySelector('.pios');
+                                                                btcpanel.classList.add('d-flex');
+                                                                btcpanel.classList.remove('d-none');
+                                                            }}>VIEW OFFERS</button>
 			                                </div>
 			                            </div>
 			                        </div>
@@ -100,8 +1062,9 @@ function Front() {
 			            <div class="col-md-1"></div>
 			            <div class="col-md-6  py_0 heading">
 			            	
-			            		<h1 class="heading_more">
-			            			More than a crypto exchange
+			            		{/* <h1 class="heading_more"> */}
+                                <h1 className=" display-3">
+			            			More than a crypto exchange
 			            		</h1>
 			            		<p class="more">
 			            			We pick the best — you make a choice

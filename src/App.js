@@ -26,13 +26,13 @@ function App() {
       <BrowserRouter>
         <Header></Header>
         <Routes>
-          <Route exact path="/" element={<Index_main />} />
-          <Route exact path="/Work_main" element={<Work_main />} />
-          <Route exact path="/About_main" element={<About_main />} />
-          <Route exact path="/Faq_main" element={<Faq_main />} />
-          <Route exact path="/Overview_main" element={<Overview_main />} />
-          <Route exact path="/Pool_main" element={<Pool_main />} />
-          <Route exact path="/Token_main" element={<Token_main />} />
+          <Route path="/" element={<Index_main />} />
+          <Route path="/Work_main" element={<Work_main />} />
+          <Route path="/About_main" element={<About_main />} />
+          <Route path="/Faq_main" element={<Faq_main />} />
+          <Route path="/Overview_main" element={<Overview_main />} />
+          <Route path="/Pool_main" element={<Pool_main />} />
+          <Route path="/Token_main" element={<Token_main />} />
 
 
         </Routes>

@@ -1,0 +1,22 @@
+.btcpanel{
+    background-color: #2e2532;
+    top:50px;
+    z-index: 99;
+}
+.ethpanel{
+    background-color: #2e2532;
+    top:50px;
+    z-index: 99;
+}
+.viewoffers{
+    background-color: #3e0064;
+    width: max-content;
+    z-index: 99;
+    padding: 1rem 2rem;
+}
+.pios{
+    position: absolute;
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+}
