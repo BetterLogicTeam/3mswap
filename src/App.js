@@ -17,8 +17,6 @@ import Faq_main from "./Components/Faq_main";
 import Overview_main from "./Components/Overview_main";
 import Pool_main from "./Components/Pool_main";
 import Token_main from "./Components/Token_main";
-import Liquidity_main from "./Components/Liquidity_main";
-import Crypto_main from "./Components/Crypto_main";
 
 
 
@@ -36,8 +34,6 @@ function App() {
           <Route path="/Overview_main" element={<Overview_main />} />
           <Route path="/Pool_main" element={<Pool_main />} />
           <Route path="/Token_main" element={<Token_main />} />
-          <Route path="/Liquidity_main" element={<Liquidity_main />} />
-          <Route path="/Crypto_main" element={<Crypto_main />} />
 
 
 
