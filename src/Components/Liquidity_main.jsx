@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import { AiFillStar, AiOutlineClose } from "react-icons/ai";
 import { FaAngleDown } from "react-icons/fa";
 import { BiDownArrowAlt } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import "./Front.css";
 
-function Front() {
+
+function Liquidity_main() {
   return (
     <div>
       <div className="pios d-none justify-content-center align-items-center">
@@ -103,7 +103,7 @@ function Front() {
                         <div class="exchange_hd">
                           <ul class="nav nav-pills pool_tab" role="tablist">
                             <li class="nav-item">
-                              <Link to="/Crypto_main">
+                            <Link to="/Crypto_main">
                                 Exchange Crypto
                                 </Link>
                             </li>
@@ -112,7 +112,7 @@ function Front() {
                         <div class="exchange_tools">
                           <ul class="nav nav-pills pool_tab" role="tablist">
                             <li class="nav-item">
-                              <Link to="/Liquidity_main">Liquidity</Link>
+                              <Link to="#">Liquidity</Link>
                             </li>
                           </ul>
                         </div>
@@ -2141,7 +2141,7 @@ function openCity(evt, cityName) {
 </script> */}
       </div>
     </div>
-  );
+  )
 }
 
-export default Front;
+export default Liquidity_main
