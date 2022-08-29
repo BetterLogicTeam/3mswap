@@ -2,7 +2,6 @@ import React from "react";
 import { AiFillStar, AiOutlineClose } from "react-icons/ai";
 import { FaAngleDown } from "react-icons/fa";
 import { BiDownArrowAlt } from "react-icons/bi";
-import { Link } from "react-router-dom";
 import "./Front.css";
 
 function Front() {
@@ -103,16 +102,16 @@ function Front() {
                         <div class="exchange_hd">
                           <ul class="nav nav-pills pool_tab" role="tablist">
                             <li class="nav-item">
-                              <Link to="/Crypto_main">
+                              <a>
                                 Exchange Crypto
-                                </Link>
+                                </a>
                             </li>
                           </ul>
                         </div>
                         <div class="exchange_tools">
                           <ul class="nav nav-pills pool_tab" role="tablist">
                             <li class="nav-item">
-                              <Link to="/Liquidity_main">Liquidity</Link>
+                              <a>Liquidity</a>
                             </li>
                           </ul>
                         </div>
